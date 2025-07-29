@@ -1,5 +1,3 @@
-import org.gradle.internal.impldep.org.eclipse.jgit.util.RawCharUtil.trimTrailingWhitespace
-
 plugins {
 	java
 	checkstyle
