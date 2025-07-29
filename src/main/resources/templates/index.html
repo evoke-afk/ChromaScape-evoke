@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChromaScape Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark fixed-top bg-dark" id="navs">
+        <div class="container-fluid" id="">
+          <span class="navbar-brand h1 d-flex align-items-center gap-2 p-2 m-2">
+            <img
+              src="/imagesWeb/CS.png"
+              alt="ChromaScape logo"
+              style="height: 32px; width: 32px"
+              class="me-2"
+            />
+            ChromaScape Hub
+          </span>
+          <button
+            type="button"
+            class="btn btn-primary p-2 m-2"
+            onclick="window.location.href='/colour'"
+          >
+            Colour picker
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- script container -->
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Script Selection -->
+          <div class="col-md-3 border-end" id="script-list-container">
+            <!-- Script list content -->
+            <ol class="list-group" id="script-list">
+              <!--This is dynamically allocated with scripts like shown below-->
+              <!--<li class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">-->
+              <!--<div class="fw-bold p-2">Script name</div>-->
+              <!--</li>-->
+            </ol>
+          </div>
+          <!-- Main Area -->
+          <div class="col-md-9 d-flex flex-column">
+            <!-- Progress Bar -->
+            <div class="my-3">
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  style="width: 0"
+                  id="progressBar"
+                >
+                  0%
+                </div>
+              </div>
+            </div>
+
+            <!-- Console Output -->
+            <div
+              class="flex-grow-1 overflow-auto bg-dark text-white p-3 rounded"
+              id="consoleOutput"
+            >
+              <!-- Logs go here -->
+            </div>
+
+            <!-- Controls -->
+            <div class="my-3">
+              <div class="d-flex justify-content-end align-items-center gap-2">
+                <!-- Start button -->
+                <button
+                  class="btn btn-success m-2"
+                  style="width: 100px"
+                  id="startButton"
+                >
+                  Start
+                </button>
+
+                <label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    placeholder="Duration mins"
+                    style="width: 150px"
+                    min="0"
+                    step="1"
+                    id="durationInput"
+                  />
+                </label>
+                <!-- fixed dropdown box -->
+                <div class="dropdown m-2">
+                  <button
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="windowModeDropdown"
+                    style="width: 100px"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Fixed?
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="windowModeDropdown"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#" data-value="Fixed"
+                        >Fixed</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-value="Resizable"
+                        >Resizable</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+      <p>ChromaScape Hub</p>
+    </footer>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
