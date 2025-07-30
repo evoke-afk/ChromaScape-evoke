@@ -8,7 +8,7 @@
 
 <div align="center">
   <h1>
-    <img src="src/main/resources/static/imagesWeb/CS.png" alt="logo" width="40">
+    <img src="src/main/resources/static/imagesWeb/CS.png" alt="logo" width="27">
     ChromaScape
   </h1>
 </div>
