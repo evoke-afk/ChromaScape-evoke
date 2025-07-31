@@ -29,7 +29,7 @@ Due to the constraints of remote input, this project currently supports Windows 
 5. (Optional) Pat yourself on the back :]
 
 # Documentation and Tutorials
-- Please visit the Wiki for detailed guides on writing scripts with this framework. (UNDER CONSTRUCTION)
+- Please visit the [Wiki](https://github.com/StaticSweep/ChromaScape/wiki) for detailed guides on writing scripts with this framework.
 
 # Features
 
