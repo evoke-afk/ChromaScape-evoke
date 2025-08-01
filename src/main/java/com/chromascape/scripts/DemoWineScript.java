@@ -179,7 +179,7 @@ public class DemoWineScript extends BaseScript {
    */
   private void clickImage(String imagePath, String speed, double threshold) {
     try {
-      BufferedImage gameView = ScreenManager.captureWindow();
+      BufferedImage gameView = controller().zones().getGameView();
       Rectangle boundingBox = TemplateMatching.match(imagePath, gameView, threshold, false);
 
       if (boundingBox == null || boundingBox.isEmpty()) {
@@ -236,7 +236,7 @@ public class DemoWineScript extends BaseScript {
    */
   private boolean checkIfImageExists(String imagePath, double threshold) {
     try {
-      BufferedImage gameView = ScreenManager.captureWindow();
+      BufferedImage gameView = controller().zones().getGameView();
       Rectangle boundingBox = TemplateMatching.match(imagePath, gameView, threshold, false);
 
       if (boundingBox == null || boundingBox.isEmpty()) {
@@ -247,7 +247,7 @@ public class DemoWineScript extends BaseScript {
       return true;
 
     } catch (Exception e) {
-      logger.addLog("clickImage failed: " + e.getMessage());
+      logger.addLog("checkIfImageExists failed: " + e.getMessage());
       stop();
     }
     return false;

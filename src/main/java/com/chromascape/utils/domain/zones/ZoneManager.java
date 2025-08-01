@@ -40,7 +40,7 @@ public class ZoneManager {
   };
 
   /** Threshold values corresponding to template matching sensitivity for each UI element. */
-  private final double[] zoneThresholds = {0.025, 0.040, 0.035, 0.020};
+  private final double[] zoneThresholds = {0.025, 0.100, 0.035, 0.020};
 
   /**
    * Constructs a new ZoneManager configured for either fixed or resizable mode.
