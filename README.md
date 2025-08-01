@@ -1,8 +1,17 @@
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Platform](https://img.shields.io/badge/Platform-Windows-orange)
-![Repo Size](https://img.shields.io/github/repo-size/StaticSweep/ChromaScape)
+<div align="center">
 
-# ![logo](src/main/resources/static/imagesWeb/CS.png) ChromaScape
+  ![Java](https://img.shields.io/badge/Java-17-blue)
+  ![Platform](https://img.shields.io/badge/Platform-Windows-orange)
+  ![Repo Size](https://img.shields.io/github/repo-size/StaticSweep/ChromaScape)
+
+</div>
+
+<div align="center">
+  <h1>
+    <img src="src/main/resources/static/imagesWeb/CS.png" alt="logo" width="27">
+    ChromaScape
+  </h1>
+</div>
 
 ---
 
@@ -20,7 +29,7 @@ Due to the constraints of remote input, this project currently supports Windows 
 5. (Optional) Pat yourself on the back :]
 
 # Documentation and Tutorials
-- Please visit the Wiki for detailed guides on writing scripts with this framework. (UNDER CONSTRUCTION)
+- Please visit the [Wiki](https://github.com/StaticSweep/ChromaScape/wiki) for detailed guides on writing scripts with this framework.
 
 # Features
 
