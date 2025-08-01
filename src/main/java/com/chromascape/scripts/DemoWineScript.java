@@ -7,7 +7,6 @@ import com.chromascape.utils.core.screen.colour.ColourInstances;
 import com.chromascape.utils.core.screen.topology.ChromaObj;
 import com.chromascape.utils.core.screen.topology.ColourContours;
 import com.chromascape.utils.core.screen.topology.TemplateMatching;
-import com.chromascape.utils.core.screen.window.ScreenManager;
 import com.chromascape.web.logs.LogService;
 import java.awt.Point;
 import java.awt.Rectangle;
