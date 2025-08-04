@@ -30,6 +30,7 @@ Due to the constraints of remote input, this project currently supports Windows 
 
 # Documentation and Tutorials
 - Please visit the [Wiki](https://github.com/StaticSweep/ChromaScape/wiki) for detailed guides on writing scripts with this framework.
+- Feel free to join the [Discord](https://discord.gg/UKeR4Bpk)
 
 # Features
 
