@@ -47,7 +47,7 @@ https://github.com/user-attachments/assets/a7a39096-6d65-4ff6-8843-f3661cc9a92d
 ### - Remote input
 ChromaScape utilises advanced remote input techniques to act like a separate second mouse that interacts with the client window. 
 This approach avoids hijacking the physical mouse, allowing you to continue using your PC uninterrupted while the bot works away in the background. 
-By interfacing with native Windows APIs, the framework ensures that all mouse actions appear genuine to the client window.
+By interfacing with the Java canvas of the client using JNI, the framework ensures that all mouse actions appear genuine to the client window.
 
 ### - Humanised mouse movement
 To further reduce bot detection risks, ChromaScape uses humanised mouse movement patterns that mimic real user behavior. Through a combination of multiple bezier paths, easing functions and the ability to overshoot/undershoot then recorrect - this produces surprisingly natural-looking behavior.
