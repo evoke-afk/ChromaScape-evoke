@@ -167,19 +167,4 @@ public class SubZoneMapper {
       return null;
     }
   }
-
-  /**
-   * Maps the area of the actual game viewport within a fixed window layout.
-   *
-   * @param zone The bounding box of the full game area.
-   * @return A rectangle representing the viewport of the game.
-   */
-  public static Rectangle mapFixedGameView(Rectangle zone) {
-    if (zone != null) {
-      return new Rectangle(zone.x + 4, zone.y + 4, 511, 333);
-    } else {
-      System.out.println("GameView is not found because minimap is null");
-      return null;
-    }
-  }
 }
