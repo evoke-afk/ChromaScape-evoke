@@ -21,7 +21,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class Idler {
 
-  private static final Logger logger = LogManager.getLogger(Idler.class.getName());
+  private static final Logger logger = LogManager.getLogger(Idler.class);
 
   /**
    * Waits until either the specified timeout has elapsed or until the client chatbox reports that
@@ -35,6 +35,7 @@ public class Idler {
    * @param timeoutSeconds the maximum number of seconds to remain idle before continuing
    */
   public static void waitUntilIdle(BaseScript base, int timeoutSeconds) {
+    BaseScript.checkInterrupted();
     try {
       Instant start = Instant.now();
       Instant deadline = start.plus(Duration.ofSeconds(timeoutSeconds));
