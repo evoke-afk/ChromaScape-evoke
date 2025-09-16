@@ -23,7 +23,7 @@ import org.apache.logging.log4j.Logger;
  *
  * <ul>
  *   <li>Finds a random point within the bounding box of a detected image template.
- *   <li>Finds a random point inside the contour of the first detected object of a specified color.
+ *   <li>Finds a random point inside the contour of the first detected object of a specified colour.
  * </ul>
  *
  * <p>These utilities are commonly reused across scripts written for the ChromaScape automation
@@ -72,16 +72,16 @@ public class PointSelector {
   }
 
   /**
-   * Attempts to find a random point inside the contour of the first object of the specified color.
+   * Attempts to find a random point inside the contour of the first object of the specified colour.
    *
    * @param image the image to search in (e.g. game view from controller)
-   * @param colourName the name of the color (must match ColourInstances key, e.g. "Purple")
+   * @param colourName the name of the colour (must match ColourInstances key, e.g. "Purple")
    * @param maxAttempts maximum number of attempts to find a point inside the contour
    * @return a random Point inside the contour, or null if not found/error
    */
   public static Point getRandomPointInColour(
       BufferedImage image, String colourName, int maxAttempts) {
-    return getRandomPointByColor(image, ColourInstances.getByName(colourName), maxAttempts);
+    return getRandomPointByColour(image, ColourInstances.getByName(colourName), maxAttempts);
   }
 
   public static Point getRandomPointByColour(
