@@ -84,7 +84,7 @@ public class PointSelector {
     return getRandomPointByColor(image, ColourInstances.getByName(colourName), maxAttempts);
   }
 
-  public static Point getRandomPointByColor(
+  public static Point getRandomPointByColour(
       BufferedImage image, ColourObj colourName, int maxAttempts) {
     List<ChromaObj> objs;
     try {
