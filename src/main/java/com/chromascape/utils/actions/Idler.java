@@ -46,7 +46,6 @@ public class Idler {
         ColourObj black = ColourInstances.getByName("Black");
         String idleText = Ocr.extractText(latestMessage, "Plain 12", red, true);
         String timeStamp = Ocr.extractText(latestMessage, "Plain 12", black, true);
-        logger.info(String.format("Idle: %s - %s", idleText, timeStamp));
         if ((idleText.contains("moving") || idleText.contains("idle")) && !timeStamp.equals(lastMessage)) {
           lastMessage = timeStamp;
           return;
