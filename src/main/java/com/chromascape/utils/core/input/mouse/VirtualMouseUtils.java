@@ -21,6 +21,14 @@ import javax.swing.SwingUtilities;
  */
 public class VirtualMouseUtils {
 
+  /** Various available mouse speeds. */
+  public enum Speed {
+    SLOW,
+    MEDIUM,
+    FAST,
+    FASTEST
+  }
+
   /** The current virtual mouse position. */
   private Point currentPosition;
 
