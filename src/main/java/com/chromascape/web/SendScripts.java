@@ -27,18 +27,19 @@ public class SendScripts {
   /**
    * Returns a list of script file names located in the {@code scripts} directory.
    *
-   * <p>This endpoint scans only the top-level entries (non-recursive).
+   * <p>This endpoint scans the directory recursively so nested folders are included in the results.
    *
    * @return a list of script file names relative to {@code SCRIPTS_DIR}
    * @throws IOException if an I/O error occurs while reading the directory
    */
   @GetMapping("/scripts")
   public List<String> getScripts() throws IOException {
-    try (Stream<Path> stream = Files.walk(SCRIPTS_DIR, 1)) {
+    try (Stream<Path> stream = Files.walk(SCRIPTS_DIR)) {
       return stream
-          .filter(path -> !path.equals(SCRIPTS_DIR))
+          .filter(Files::isRegularFile)
           .map(SCRIPTS_DIR::relativize)
-          .map(Path::toString)
+          .map(path -> path.toString().replace("\\", "/"))
+          .sorted()
           .collect(Collectors.toList());
     }
   }

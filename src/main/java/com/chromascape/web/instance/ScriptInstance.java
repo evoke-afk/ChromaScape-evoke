@@ -38,7 +38,7 @@ public class ScriptInstance {
     this.stateHandler = stateHandler;
 
     String fileName = config.getScript();
-    String className = fileName.replace(".java", "");
+    String className = fileName.replace(".java", "").replace("/", ".");
 
     Class<?> script = Class.forName("com.chromascape.scripts." + className);
     Constructor<?> constructor = script.getDeclaredConstructor(boolean.class);
