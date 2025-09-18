@@ -103,18 +103,20 @@ public class PointSelector {
     ChromaObj obj = objs.get(0);
     int attempts = 0;
     Point p = ClickDistribution.generateRandomPoint(obj.boundingBox());
-    while (!ColourContours.isPointInContour(p, obj.contour()) && attempts < maxAttempts) {
-      BaseScript.checkInterrupted();
-      p = ClickDistribution.generateRandomPoint(obj.boundingBox());
-      attempts++;
-    }
-    logger.info("Attempts to find point in colour '{}': {}", colourName, attempts);
-    if (attempts >= maxAttempts) {
-      logger.error(
-          "Failed to find a valid point in {} contour after {} attempts.", colourName, maxAttempts);
-      return null;
-    }
-
     return p;
+    // while (!ColourContours.isPointInContour(p, obj.contour()) && attempts < maxAttempts) {
+    //   BaseScript.checkInterrupted();
+    //   p = ClickDistribution.generateRandomPoint(obj.boundingBox());
+    //   attempts++;
+    // }
+    // logger.info("Attempts to find point in colour '{}': {}", colourName, attempts);
+    // if (attempts >= maxAttempts) {
+    //   logger.error(
+    //       "Failed to find a valid point in {} contour after {} attempts.", colourName,
+    // maxAttempts);
+    //   return null;
+    // }
+
+    // return p;
   }
 }
